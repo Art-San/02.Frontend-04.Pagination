@@ -3,7 +3,7 @@ import Pagination from './Pagination'
 import User from './User'
 const Users = ({ users, ...rest }) => {
 	const count = users.length
-	const pegeSize = 4
+	const pegeSize = 14
 
 	const handlePageChange = (pageIndex) => {
 		console.log('page :', pageIndex)
