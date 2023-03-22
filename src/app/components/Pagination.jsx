@@ -5,7 +5,6 @@ const Pagination = ({ itemsCount, pageSize, onPageChange, currentPege }) => {
 	const pageCount = Math.ceil(itemsCount / pageSize)
 	if (pageCount === 1) return null
 	const page = _.range(1, pageCount + 1)
-	console.log('pageCount', pageCount)
 	return (
 		<nav>
 			<ul className='pagination'>
@@ -17,13 +16,12 @@ const Pagination = ({ itemsCount, pageSize, onPageChange, currentPege }) => {
 						}
 						key={'page_' + page}
 					>
-						<a
-							href='#h'
+						<button
 							className='page-link'
 							onClick={() => onPageChange(page)}
 						>
 							{page}
-						</a>
+						</button>
 					</li>
 				))}
 			</ul>
