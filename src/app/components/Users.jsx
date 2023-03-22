@@ -8,7 +8,6 @@ const Users = ({ users, ...rest }) => {
 	const [currentPege, setCurrentPage] = useState(1)
 
 	const handlePageChange = (pageIndex) => {
-		console.log('page :', pageIndex)
 		setCurrentPage(pageIndex)
 	}
 
