@@ -22,15 +22,15 @@ const CountersList = () => {
     // ПЕРВЫЙ ВАРИАНТ
 
     // const handleIncrement = (id) => {
-    // 	setCounters(
-    // 		counters.map((item) => {
-    // 			if (item.id === id) {
-    // 				return { ...item, value: item.value + 1 }
-    // 			} else {
-    // 				return item
-    // 			}
-    // 		})
-    // 	)
+    //     setCounters(
+    //         counters.map((item) => {
+    //             if (item.id === id) {
+    //                 return { ...item, value: item.value + 1 }
+    //             } else {
+    //                 return item
+    //             }
+    //         })
+    //     )
     // }
 
     // ВТОРОЙ ВАРИАНТ
@@ -47,15 +47,15 @@ const CountersList = () => {
     // ПЕРВЫЙ ВАРИАНТ
 
     // const handleDecrement = (id) => {
-    // 	setCounters(
-    // 		counters.map((item) => {
-    // 			if (item.id === id) {
-    // 				return { ...item, value: item.value - 1 }
-    // 			} else {
-    // 				return item
-    // 			}
-    // 		})
-    // 	)
+    //     setCounters(
+    //         counters.map((item) => {
+    //             if (item.id === id) {
+    //                 return { ...item, value: item.value - 1 }
+    //             } else {
+    //                 return item
+    //             }
+    //         })
+    //     )
     // }
 
     // ВТОРОЙ ВАРИАНТ

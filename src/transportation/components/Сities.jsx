@@ -1,22 +1,22 @@
-import React from 'react'
-// import { paginate } from '../utils/paginate'
-// import Pagination from './Pagination'
+import React, { useState } from 'react'
+import { paginate } from '../utils/paginate'
+import Pagination from './Pagination'
 import Сiti from './Сiti'
 import PropTypes from 'prop-types'
 const Сities = ({ cities: allcities, ...rest }) => {
-    // const count = allcities.length
-    // const pageSize = 4
-    // const [currentPege] = useState(1)
+    const count = allcities.length
+    const pageSize = 4
+    const [currentPege, setCurrentPage] = useState(1)
 
-    // const handlePageChange = (pageIndex) => {
-    //     setCurrentPage(pageIndex)
-    // }
+    const handlePageChange = (pageIndex) => {
+        setCurrentPage(pageIndex)
+    }
 
-    // const userGrop = paginate(allUsers, currentPege, pageSize)
+    const cityGrop = paginate(allcities, currentPege, pageSize)
 
     return (
         <>
-            {1 > 0 && (
+            {count > 0 && (
                 <table className="table">
                     <thead>
                         <tr>
@@ -32,18 +32,18 @@ const Сities = ({ cities: allcities, ...rest }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {allcities.map((city) => (
+                        {cityGrop.map((city) => (
                             <Сiti key={city._id} {...rest} {...city} />
                         ))}
                     </tbody>
                 </table>
             )}
-            {/* <Pagination
+            <Pagination
                 itemsCount={count}
                 pageSize={pageSize}
                 onPageChange={handlePageChange}
                 currentPege={currentPege}
-            /> */}
+            />
         </>
     )
 }

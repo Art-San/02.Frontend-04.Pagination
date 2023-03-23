@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Сities from './components/Сities'
-// import SearchStatus from './components/SearchStatus'
+import SearchStatusDirection from './components/SearchStatusDirection'
 import api from './api'
 
-function App() {
+function App2() {
     const [cities, setCities] = useState(api.price.fetchAll())
     console.log('users', cities)
     const handleDelete = (cityId) => {
@@ -22,7 +22,7 @@ function App() {
     }
     return (
         <div>
-            {/* <SearchStatus length={users.length} /> */}
+            <SearchStatusDirection length={cities.length} />
             <Сities
                 cities={cities}
                 onDelete={handleDelete}
@@ -32,4 +32,4 @@ function App() {
     )
 }
 
-export default App
+export default App2
